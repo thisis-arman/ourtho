@@ -1,7 +1,7 @@
 import mongoose, { model, Schema } from "mongoose";
-import { IBankAccount } from "./bankAccount.interface";
+import { TBankAccount } from "./bankAccount.interface";
 
-const BankAccountSchema: Schema = new Schema<IBankAccount>(
+const BankAccountSchema: Schema = new Schema<TBankAccount>(
   {
     userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
     accountName: { type: String, required: true },
@@ -12,7 +12,7 @@ const BankAccountSchema: Schema = new Schema<IBankAccount>(
   { timestamps: true }
 );
 
-export const BankAccount = model<IBankAccount>(
+export const BankAccount = model<TBankAccount>(
   "BankAccount",
   BankAccountSchema
 );

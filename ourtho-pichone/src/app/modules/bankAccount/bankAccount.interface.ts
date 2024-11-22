@@ -1,6 +1,6 @@
 import { Types } from "mongoose";
 
-export interface IBankAccount {
+export type TBankAccount= {
   _id?: string;
   userId: Types.ObjectId; // references User
   accountName: string;

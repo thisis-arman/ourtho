@@ -6,5 +6,3 @@ export const budgetSchema = z.object({
   startDate: z.date(),
   endDate: z.date(),
 });
-
-export const budgetUpdateSchema = budgetSchema.partial(); // for update scenarios
